@@ -31,7 +31,9 @@ A RESTful API built with **Go + Fiber** that manages users with a date-of-birth 
 │       ├── db.go                 # SQLC boilerplate
 │       ├── models.go             # Generated User struct
 │       ├── querier.go            # Generated interface + param types
-│       └── query.sql.go          # Generated query implementations
+│       ├── query.sql.go          # Generated query implementations
+|       └── query.sql             # Raw SQL Queries for SQLC generation
+|       
 ├── internal/
 │   ├── handler/user_handler.go   # HTTP handlers (Fiber)
 │   ├── logger/logger.go          # Singleton Zap logger
@@ -42,7 +44,10 @@ A RESTful API built with **Go + Fiber** that manages users with a date-of-birth 
 │   ├── repository/
 │   │   └── user_repository.go    # DB access abstraction
 │   ├── routes/routes.go          # Route registration
-│   └── service/user_service.go   # Business logic
+│   └── service/
+|        ├── user_service.go      # Business logic
+|        ├── user_service_test.go # Service layer unit tests
+|        └── age.go               # Exported CalculateAge() wrapper
 ├── sqlc.yaml                     # SQLC generation config
 ├── Dockerfile
 ├── docker-compose.yml
