@@ -69,7 +69,7 @@ A RESTful API built with **Go + Fiber** that manages users with a date-of-birth 
 ### 1 – Clone & configure
 
 ```bash
-git clone https://github.com/example/go-user-api.git
+git clone https://github.com/Mohammad-Ikhlas-khan/Go-REST-API
 cd go-user-api
 cp .env.example .env
 # Edit .env with your DB credentials
