@@ -1,0 +1,14 @@
+# Binary
+server
+*.exe
+
+# Environment
+.env
+
+# Go
+vendor/
+*.test
+
+# Editor
+.vscode/
+.idea/
